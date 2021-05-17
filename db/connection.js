@@ -1,5 +1,4 @@
-const mysql = require('mysql2');
-
+const mysql = require('mysql');
 // connect to mysql database
 const db = mysql.createConnection (
     {
@@ -10,6 +9,7 @@ const db = mysql.createConnection (
     },
     console.log('connected to the Employee Tracker database.')
 );
+
 
 //export the file 
 module.exports = db;

@@ -1,15 +1,22 @@
 
 //required dependancies 
 const inquirer = require('inquirer');
-const Connection = require('mysql2/typings/mysql/lib/Connection');
-//const mysql = require('mysql');
+const mysql = require('mysql');
+const CTable = require('console.table');
 
 
-// import db 
+//const db = require('./db/connection')
 
-const db = require('./db/connection');
+const db = mysql.createConnection (
+    {
+        host: 'localhost',
+        user: 'root',
+        password: 'Raptor10!',
+        database: 'employee_tracker'
+    },
+    console.log('connected to the Employee Tracker database.')
 
-//inquirer
+);
 
 const promptUser= () => {
     console.log(`
@@ -41,9 +48,9 @@ const promptUser= () => {
  
 .then(promptAnswer => {
 
-    switch(answers.startTracker){
+    switch(promptAnswer.startTracker){
 
-        case "view all departments":
+        case "view all departments":no
             allDep();
             break;
 
@@ -78,10 +85,25 @@ const promptUser= () => {
     });
 };
 
-//display all departments 
-
-
-
-
-
 promptUser()
+
+// //display all departments 
+function allDep(){
+    connection.query("SELECT employee.first_name, employee.last_name, department.name AS Department FROM employee JOIN roles ON employee.role_id = roles.id JOIN department ON roles.department_id = department.id ORDER BY employee.id;", 
+    function(err, res) {
+      if (err) throw err
+      console.table(res)
+      startPrompt()
+    })
+  }
+   
+
+
+
+//"view all roles",
+
+//"view all employees",
+//"add a department",
+//"add a role",
+//"add an employee",
+//"update an employee role"
