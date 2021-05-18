@@ -87,9 +87,11 @@ const promptUser= () => {
 
 promptUser()
 
-// //display all departments 
+// //display all departments  
+
+// SELECT * from department;
 function allDep(){
-    connection.query("SELECT employee.first_name, employee.last_name, department.name AS Department FROM employee JOIN roles ON employee.role_id = roles.id JOIN department ON roles.department_id = department.id ORDER BY employee.id;", 
+    db.query()
     function(err, res) {
       if (err) throw err
       console.table(res)
@@ -98,12 +100,38 @@ function allDep(){
   }
    
 
+//"view all roles", 
+
+// SELECT * from ROLES;
+
+//"view all employees", 
+// THEN I am presented with a formatted table showing employee data, 
+// including employee ids, 
+// first names, last names, 
+// job titles, departments, salaries, and 
+// managers that the employees report to
+// SELECT employee.ID, employee.first_name, employee.last_name, roles.title, roles.salary, roles.department_id
+//from employee
+//
+// SELECT * FROM employee
+// LEFT JOIN roles ON employee.roles_id = roles.id;
 
 
-//"view all roles",
-
-//"view all employees",
 //"add a department",
+// INSERT INTO department (name)
+// Values('');
+
 //"add a role",
+// INSERT INTO roles (title, salary, department_id)
+// VALUES 
+// ('' ,  ,  ),
+
 //"add an employee",
-//"update an employee role"
+// INSERT INTO employee (first_name, last_name, roles_id , manager_id)
+// VALUES 
+// ('' , '',  , ),
+
+// //"update an employee role"
+// update employee
+//     -> set roles_id =  
+//     -> where ID = ;
