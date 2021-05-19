@@ -18,7 +18,14 @@ const db = mysql.createConnection (
 
 );
 
-const promptUser= () => {
+db.connect(function(err){
+    if (err) throw err;
+    promptUser();
+})
+
+// start inquirer 
+
+ function promptUser() {
     console.log(`
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,19 +92,19 @@ const promptUser= () => {
     });
 };
 
-promptUser()
 
 // //display all departments  
 
 // SELECT * from department;
 function allDep(){
-    db.query()
-    function(err, res) {
-      if (err) throw err
-      console.table(res)
-      startPrompt()
+    const sql = `SELECT * from department`;
+    db.query(query, function(err, res){
+        if (err) throw err;
+        console.table('employee', res);
+        promptUser();
     })
-  }
+};
+    
    
 
 //"view all roles", 
