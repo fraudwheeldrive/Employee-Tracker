@@ -38,17 +38,18 @@ https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/view?usp=shari
 
 ## Credits
 This app was built with:
-Javascript 
-node.js 
-Inquirer 
-mysql 
+* Javascript 
+* node.js 
+* Inquirer 
+* mysql 
 
 
 with reference from Mozilla Developer Network, NPM and Node documentation and w3 schools.
-https://dev.mysql.com/doc/refman/8.0/en/
-https://www.w3schools.com/sql/sql_join.asp
-https://www.w3schools.com/js/js_switch.asp
-https://www.npmjs.com/package/inquirer
+
+* https://dev.mysql.com/doc/refman/8.0/en/
+* https://www.w3schools.com/sql/sql_join.asp
+* https://www.w3schools.com/js/js_switch.asp
+* https://www.npmjs.com/package/inquirer
 
 ## License
 MIT
