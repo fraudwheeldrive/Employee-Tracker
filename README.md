@@ -3,6 +3,7 @@ A Content Management System that utilizes Control Line Input to manage a compani
 
 # User Story 
 AS A business owner
+
 `I WANT to be able to view and manage the departments, roles, and employees in my company
 SO THAT I can organize and plan my business`
 
@@ -44,7 +45,7 @@ to cycle through and use the application
 
 This is how the command line application looks
 
-![alt text](https://github.com/fraudwheeldrive/Readme-Generator/blob/main/assets/images/screenshot.PNG)
+![alt text](https://github.com/fraudwheeldrive/Employee-Tracker/blob/main/assets/images/Employee%20Tracker%20screen.PNG)
 
 Please refer to video below to see it in action
 
