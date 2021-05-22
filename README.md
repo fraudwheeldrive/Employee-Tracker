@@ -29,7 +29,7 @@ This is how the command line application looks
 
 Please refer to video below to see it in action
 
-https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/view?usp=sharing
+https://drive.google.com/file/d/1DgYOmNSl7MLAm96moOye8k69gGeSBh3t/view
 
 
 ## Contributing
